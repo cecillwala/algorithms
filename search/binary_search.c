@@ -16,9 +16,9 @@ int binary_search(int list[], int target, int first, int last){
         return midpoint;
     }
     else if(list[midpoint] < target){
-        binary_search(list, target, midpoint + 1, last);
+        return binary_search(list, target, midpoint + 1, last);
     }
     else{
-        binary_search(list, target, first, midpoint - 1);
+       return binary_search(list, target, first, midpoint - 1);
     }
 }

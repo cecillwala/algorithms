@@ -1,3 +1,8 @@
+def main():
+    list =[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    print(f"{binary(list, 10)}")
+
+
 def binary(list, target):
     first = 0
     last = len(list) - 1
@@ -12,5 +17,5 @@ def binary(list, target):
             last = midpoint - 1
 
 
-list =[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print(f"{binary(list, 10)}")
+if __name__ == "__main__":
+    main()
