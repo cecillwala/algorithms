@@ -1,23 +1,22 @@
 #include <stdio.h>
 
-void draw(int n, int height);
+void draw(int height);
 int main(){
-    draw(5, 1);
+    draw(5);
 }
 
-void draw(int n, int height)
-{
-    if(height > n)
-    {
+void draw(int height)
+{ 
+    if (height < 1){
         return;
     }
 
-    //print one more row
+    draw(height - 1);
+
     for (int i = 0; i < height; i++)
     {
-        printf("#");
+        printf("*");
     }
     printf("\n");
 
-    draw(n, height + 1);
 }

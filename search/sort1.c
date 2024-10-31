@@ -18,7 +18,7 @@ int main() {
         //Find the smallest misplaced number
         for (int j = i + 1; j < sizeof(numbers) / sizeof(int); j++){
 
-            if (smaller > numbers[j]){
+            if (smaller < numbers[j]){
                 smaller = numbers[j];
                 smaller_index = j;
             }
