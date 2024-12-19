@@ -23,9 +23,19 @@ int main() {
         //Give the number i
         n->number = i;
         //Point to the "next" node (prev)
-        n->next = list;
+        n->next = NULL;
         //Store the current node's addess for the next node
-        list = n;
+        if(list == NULL){
+            list = n;
+        }
+        else{
+            for(node* ptr = list; ptr != NULL;ptr = ptr->next){
+                if(ptr->next == NULL){
+                    ptr->next = n;
+                    break;
+                }
+            }
+        }
     }
 
     //Start with the last node. If, it is not empty point to the next node BUT before that, 

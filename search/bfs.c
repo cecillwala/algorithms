@@ -76,3 +76,17 @@ void currentNode(node *root, int level){
     }
 
 }
+
+int factorial(int n){
+    if(n == 1){
+        return 1;
+    }
+    else{
+     return n * factorial(n - 1);
+    }
+}
+
+int factorial(int n){
+     return factorial(n - 1) + factorial(n - 2);
+    
+}
